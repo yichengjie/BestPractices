@@ -1,5 +1,7 @@
 package com.yicj.demo;
 
+import com.yicj.demo.generator1.Generator;
+
 public class BasicGenerator<T> implements Generator<T> {
 	
 	private Class<T> type ;

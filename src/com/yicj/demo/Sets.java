@@ -19,6 +19,8 @@ public class Sets {
 	//从superset中移除subset包含的元素
 	public static <T> Set<T> difference(Set<T> superset, Set<T> subset){
 		Set<T> result = new HashSet<T>(superset) ;
+		//System.out.println("superset: " + superset);
+		//System.out.println("subset: " + subset);
 		result.removeAll(subset) ;
 		return result ;
 	}
