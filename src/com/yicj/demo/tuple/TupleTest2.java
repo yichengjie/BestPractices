@@ -9,23 +9,23 @@ public class TupleTest2 {
 
 	public TupleTest2() {
 	}
-	static TwoTuple<String, Integer> f(){
+	public static TwoTuple<String, Integer> f(){
 		return tuple("hi", 47) ;
 	}
 	
-	static TwoTuple f2() {
+	public static TwoTuple f2() {
 		return tuple("hi", 47) ;
 	}
 	
-	static ThreeTuple<Coffee, String, Integer> g(){
+	public static ThreeTuple<Coffee, String, Integer> g(){
 		return tuple(new Coffee(), "hi", 47) ;
 	}
 	
-	static FourTuple<Coffee, Mocha, String, Integer> h(){
+	public static FourTuple<Coffee, Mocha, String, Integer> h(){
 		return tuple(new Coffee(), new Mocha(), "hi", 47) ;
 	}
 	
-	static FiveTuple<Coffee, Mocha, Americano, String, Integer> k(){
+	public static FiveTuple<Coffee, Mocha, Americano, String, Integer> k(){
 		return tuple(new Coffee(), new Mocha(), new Americano(), "hi", 47) ;
 	}
 	
