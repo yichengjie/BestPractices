@@ -1,9 +1,10 @@
 package com.yicj.demo.generator;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 import java.util.Random;
-
 import com.yicj.demo.generator1.Generator;
 import com.yicj.demo.generator1.Generators;
 
@@ -52,6 +53,11 @@ class Teller{
 
 public class BankTeller{
 	public static void serve(Teller t ,Customer c) {
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e) ;
+		}
 		System.out.println(t + " serves " + c );
 	}
 	
@@ -59,8 +65,13 @@ public class BankTeller{
 		
 		Random rand = new Random(47) ;
 		Queue<Customer> line = new LinkedList<Customer>() ;
-		//Generators.fill() ;
-		
+		//List<Customer> line = new ArrayList<Customer>() ;
+		Generators.fill(line,Customer.generator(),15) ;
+		List<Teller> tellers = new ArrayList<Teller>() ;
+		Generators.fill(tellers, Teller.generator, 4) ;
+		for(Customer c : line) {
+			serve(tellers.get(rand.nextInt(tellers.size())), c);
+		}
 	}
 	
 }
