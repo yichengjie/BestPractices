@@ -29,7 +29,7 @@ public class CoffeeGenerator implements Generator<Coffee> ,Iterable<Coffee>{
 		
 		try {
 			return (Coffee) types[rand.nextInt(types.length)].newInstance() ;
-		} catch (InstantiationException | IllegalAccessException e) {
+		} catch (Exception e) {
 			throw new RuntimeException(e) ;
 		}
 		

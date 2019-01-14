@@ -15,7 +15,7 @@ public class LostInfomation {
 	
 	public static void main(String[] args) {
 		List<Forb> list = new ArrayList<Forb>() ;
-		Map<Forb,Fnorkle> map = new HashMap<>() ;
+		Map<Forb,Fnorkle> map = new HashMap<Forb,Fnorkle>() ;
 		Quark<Fnorkle> quark = new Quark<Fnorkle>() ;
 		Particle<Long,Double> p = new Particle<Long,Double>() ;
 		System.out.println(Arrays.toString(list.getClass().getTypeParameters()));

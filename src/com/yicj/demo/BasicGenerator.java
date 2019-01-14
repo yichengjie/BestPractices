@@ -13,7 +13,7 @@ public class BasicGenerator<T> implements Generator<T> {
 	public T next() {
 		try {
 			return type.newInstance() ;
-		} catch (InstantiationException | IllegalAccessException e) {
+		} catch (Exception e) {
 			throw new RuntimeException(e) ;
 		}
 	}
