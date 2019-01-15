@@ -1,4 +1,4 @@
-package com.yicj.demo.generator4;
+package generics;
 
 import java.util.ArrayList;
 import java.util.List;
