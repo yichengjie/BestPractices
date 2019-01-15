@@ -45,6 +45,8 @@ class ReturnGenericType<T extends HasF>{
 public class Manipulation{
 	public static void main(String[] args) {
 		HasF hf = new HasF() ;
+		int a =1 ;
+		int b =2 ;
 		Manipulator<HasF> manipulator =
 				new Manipulator<HasF>(hf) ;
 		manipulator.manipulate();
