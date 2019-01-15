@@ -1,4 +1,4 @@
-package com.yicj.demogenerics;
+package com.yicj.demo.generics;
 import static java.lang.System.out;
 
 class ClassAsFactory<T>{

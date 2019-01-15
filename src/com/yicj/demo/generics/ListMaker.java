@@ -1,4 +1,4 @@
-package com.yicj.demogenerics;
+package com.yicj.demo.generics;
 
 import java.util.ArrayList;
 import java.util.List;

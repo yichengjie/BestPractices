@@ -1,4 +1,4 @@
-package com.yicj.demogenerics;
+package com.yicj.demo.generics;
 
 import com.sun.org.apache.bcel.internal.generic.F2D;
 
