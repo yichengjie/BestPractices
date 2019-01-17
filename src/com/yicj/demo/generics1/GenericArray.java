@@ -17,7 +17,7 @@ public class GenericArray<T> {
 	}
 	public static void main(String[] args) {
 		GenericArray<Integer> gai = 
-				new GenericArray<>(10) ;
+				new GenericArray<Integer>(10) ;
 		//Ljava.lang.Object; cannot be cast to [Ljava.lang.Integer;
 		Integer [] ia = gai.rep() ;
 		//Object [] oa = gai.rep() ;

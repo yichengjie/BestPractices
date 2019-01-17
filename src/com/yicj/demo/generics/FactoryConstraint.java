@@ -1,6 +1,5 @@
 package com.yicj.demo.generics;
 
-import com.sun.org.apache.bcel.internal.generic.F2D;
 
 interface FactoryI<T> {
 	T create() ;
