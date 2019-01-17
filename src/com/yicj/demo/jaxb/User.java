@@ -26,7 +26,7 @@ public class User implements Serializable {
         this.bibi = bibi;
     }
     
-    @XmlElement(required = true)
+    @XmlElement(required=true/*,defaultValue="zhangsan"*/)
     public String getUserName() {
         return userName;
     }
