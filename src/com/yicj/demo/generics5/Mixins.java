@@ -17,7 +17,7 @@ class TimeStampedImp implements TimeStamped{
 	}
 }
 
-interface SerialNumbered{
+interface SerialNumbered{//SerialNumber
 	long getSerialNumber() ;
 }
 
