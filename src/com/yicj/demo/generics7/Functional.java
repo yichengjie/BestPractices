@@ -2,6 +2,7 @@ package com.yicj.demo.generics7;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.math.MathContext;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -156,12 +157,41 @@ public class Functional {
 		List<Integer> li = Arrays.asList(1,2,3,4,5,6,7) ;
 		Integer result = reduce(li, new IntegerAdder()) ;
 		print(result);
-		
+		//
 		result = reduce(li, new IntegerSubtracter()) ;
-		//print(forEach(li, new Mut));
-		
-		
-		
+		print(forEach(li, new MultiplyingInteger()).result());
+		//
+		MathContext mc = new MathContext(7) ;
+		List<BigDecimal> lbd = Arrays.asList(
+				new BigDecimal(1.2,mc) ,new BigDecimal(2.2,mc) ,
+				new BigDecimal(3.3,mc) ,new BigDecimal(4.4,mc)) ;
+		BigDecimal rbd = reduce(lbd, new BigDecimalAdder()) ;
+		print(rbd) ;
+		//
+		print(filter(lbd, 
+				new GreaterThan<BigDecimal>(new BigDecimal(3)))) ;
+		//
+		//Use the prime-generation facility of BigInteger:
+		List<BigInteger> lbi = new ArrayList<BigInteger>() ; 	
+		BigInteger bi = BigInteger.valueOf(1l) ;
+		for(int i = 0 ; i < 11 ; i++) {
+			lbi.add(bi) ;
+			bi = bi.nextProbablePrime() ;
+		}
+		print(lbi);
+		//
+		BigInteger rbi = reduce(lbi, new BigIntegerAdder()) ;
+		print(rbi) ;
+		//The sum of this list of primes is also prime:
+		print(rbi.isProbablePrime(5));
+		//
+		List<AtomicLong> lal = Arrays.asList(
+				new AtomicLong(11), new AtomicLong(47),
+				new AtomicLong(74), new AtomicLong(133)) ;
+		AtomicLong ral = reduce(lal, new AtomicLongAdder()) ;
+		print(ral);
+		//
+		print(transform(lbd, new BigDecimalUlp())) ;
 	}
 	
 }
