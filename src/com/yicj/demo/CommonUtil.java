@@ -10,6 +10,12 @@ public class CommonUtil {
 		}
 	}
 	
-	
+	public static void print(Object obj) {
+		if(obj!=null) {
+			System.out.print(obj.toString());
+		}else {
+			System.out.print("null");
+		}
+	}
 
 }

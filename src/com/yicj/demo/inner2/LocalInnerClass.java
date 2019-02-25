@@ -1,5 +1,6 @@
 package com.yicj.demo.inner2;
-import static com.yicj.demo.CommonUtil.println;;
+import static com.yicj.demo.CommonUtil.print;
+import static com.yicj.demo.CommonUtil.println;
 
 
 interface Counter{
@@ -17,7 +18,7 @@ public class LocalInnerClass {
 			}
 			@Override
 			public int next() {
-				println(name); //Access local final
+				print(name); //Access local final
 				return count ++;
 			}
 		}
@@ -35,7 +36,7 @@ public class LocalInnerClass {
 			
 			@Override
 			public int next() {
-				println(name) ;// access local fianl
+				print(name) ;// access local fianl
 				return count++;
 			}
 		};
