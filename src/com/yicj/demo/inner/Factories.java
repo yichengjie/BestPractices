@@ -1,6 +1,6 @@
 package com.yicj.demo.inner;
 
-import static com.yicj.demo.CommonUtil.print;
+import static com.yicj.demo.CommonUtil.println;
 
 interface Service{
 	void method1() ;
@@ -19,12 +19,12 @@ class Implemention1 implements Service{
 	
 	@Override
 	public void method1() {
-		print("Implementation1 method1");
+		println("Implementation1 method1");
 	}
 
 	@Override
 	public void method2() {
-		print("Implementation1 method2");
+		println("Implementation1 method2");
 	}
 	
 	public static ServiceFactory factory = 
@@ -46,12 +46,12 @@ class Implemention2 implements Service{
 	
 	@Override
 	public void method1() {
-		print("Implemention2 method1");
+		println("Implemention2 method1");
 	}
 
 	@Override
 	public void method2() {
-		print("Implemention2 method2");
+		println("Implemention2 method2");
 	}
 	
 	public static ServiceFactory factory = 

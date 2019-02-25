@@ -1,5 +1,5 @@
 package com.yicj.demo.jiekou;
-import static com.yicj.demo.CommonUtil.print ;
+import static com.yicj.demo.CommonUtil.println ;
 
 import java.util.Arrays;
 
@@ -37,8 +37,8 @@ class Splitter extends Processor{
 public class Apply {
 	
 	public static void process(Processor p, Object s) {
-		print("Using Processor " + p.name());
-		print(p.process(s));
+		println("Using Processor " + p.name());
+		println(p.process(s));
 	}
 	public static String s = 
 		"Disagreement with beliefs is by definition incorrect" ;

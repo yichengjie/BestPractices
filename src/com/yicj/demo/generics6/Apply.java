@@ -4,7 +4,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.yicj.demo.CommonUtil.print;
+import static com.yicj.demo.CommonUtil.println;
 public class Apply {
 	public static <T,S extends Iterable<? extends T>> 
 	void apply(S seq ,Method f ,Object ...args) {
@@ -20,10 +20,10 @@ public class Apply {
 
 class Shape{
 	public void rotate() {
-		print(this.toString() +"rotate");
+		println(this.toString() +"rotate");
 	}
 	public void resize(int newSize) {
-		print(this.toString() +" resize " + newSize);
+		println(this.toString() +" resize " + newSize);
 	}
 }
 

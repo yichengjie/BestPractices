@@ -1,12 +1,12 @@
 package com.yicj.demo.init;
-import static com.yicj.demo.CommonUtil.print;
+import static com.yicj.demo.CommonUtil.println;
 
 class Cup{
 	public Cup(int marker) {
-		print("Cup ("+marker+")");
+		println("Cup ("+marker+")");
 	}
 	void f(int marker) {
-		print("f("+marker+")");
+		println("f("+marker+")");
 	}
 }
 
@@ -18,7 +18,7 @@ class Cups{
 		cup2 = new Cup(2) ;
 	}
 	Cups() {
-		print("Cups()");
+		println("Cups()");
 	}
 }
 
@@ -26,7 +26,7 @@ class Cups{
 public class ExplictStatic {
 	
 	public static void main(String[] args) {
-		print("Inside main()");
+		println("Inside main()");
 		//Cups.cup1.f(99);
 	}
 	static Cups cups1 = new Cups() ;

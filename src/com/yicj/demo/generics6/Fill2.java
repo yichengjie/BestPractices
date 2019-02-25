@@ -9,7 +9,7 @@ import com.yicj.demo.generator1.Generator;
 import com.yicj.demo.generator1.Latte;
 import com.yicj.demo.generator1.Mocha;
 
-import static com.yicj.demo.CommonUtil.print;
+import static com.yicj.demo.CommonUtil.println;
 
 interface Addable<T>{
 	void add(T t) ;
@@ -71,16 +71,16 @@ class Fill2Test {
 		Fill2.fill(Adapter.collectionAdapter(carrier), 
 				Latte.class, 2);
 		for(Coffee c : carrier){
-			print(c);
+			println(c);
 		}
-		print("-------------------------------");
+		println("-------------------------------");
 		//Use an adapted class
 		AddableSimpleQueue<Coffee> coffeeQueue = 
 				new AddableSimpleQueue<Coffee>() ;
 		Fill2.fill(coffeeQueue, Mocha.class, 4);
 		Fill2.fill(coffeeQueue, Latte.class, 1);
 		for(Coffee c : coffeeQueue){
-			print(c);
+			println(c);
 		}
 	}
 }

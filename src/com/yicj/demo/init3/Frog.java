@@ -1,13 +1,13 @@
 package com.yicj.demo.init3;
-import static com.yicj.demo.CommonUtil.print ;
+import static com.yicj.demo.CommonUtil.println ;
 class Characteristic{
 	private String s ;
 	Characteristic(String s){
 		this.s = s ;
-		print("Creating Characteristic " + s);
+		println("Creating Characteristic " + s);
 	}
 	protected void dispose() {
-		print("disposing Characteristic " + s);
+		println("disposing Characteristic " + s);
 	}
 }
 
@@ -15,10 +15,10 @@ class Description {
 	private String s ;
 	Description(String s){
 		this.s = s ;
-		print("Creating Description " +s);
+		println("Creating Description " +s);
 	}
 	protected void dispose() {
-		print("disposing Description " + s);
+		println("disposing Description " + s);
 	}
 }
 
@@ -28,10 +28,10 @@ class LivingCreature{
 	private Description t = 
 			new Description("Basic Living Create") ;
 	LivingCreature(){
-		print("LivingCreature()");
+		println("LivingCreature()");
 	}
 	protected void dispose() {
-		print("LivingCreature dispose");
+		println("LivingCreature dispose");
 		t.dispose();
 		p.dispose();
 	}
@@ -44,10 +44,10 @@ class Animal extends LivingCreature{
 	private Description t = 
 			new Description("Animal not Vegetable") ;
 	Animal(){
-		print("Animal()");
+		println("Animal()");
 	}
 	protected void dispose() {
-		print("Animal dispose()");
+		println("Animal dispose()");
 		t.dispose(); p.dispose();
 		super.dispose();
 	}
@@ -59,10 +59,10 @@ class Amphibian extends Animal{
 	private Description t = 
 			new Description("Both water and land") ;
 	Amphibian(){
-		print("Amphibian()");
+		println("Amphibian()");
 	}
 	protected void dispose() {
-		print("Amphibian dispose");
+		println("Amphibian dispose");
 		t.dispose(); 
 		p.dispose();
 		super.dispose();
@@ -74,17 +74,17 @@ public class Frog extends Amphibian {
 	private Characteristic p = new Characteristic("Chroks") ;
 	private Description t = new Description("Eats Bugs") ;
 	public Frog() {
-		print("Frog()");
+		println("Frog()");
 	}
 	protected void dispose() {
-		print("Frog dispose");
+		println("Frog dispose");
 		t.dispose();
 		p.dispose();
 		super.dispose();
 	}
 	public static void main(String[] args) {
 		Frog frog = new Frog() ;
-		print("Bye!");
+		println("Bye!");
 		frog.dispose();
 	}
 }

@@ -1,5 +1,5 @@
 package com.yicj.demo.generics6;
-import static com.yicj.demo.CommonUtil.print;
+import static com.yicj.demo.CommonUtil.println;
 
 import java.lang.reflect.Method;
 
@@ -7,7 +7,7 @@ class Mime{
 	public void walkAgainstTheWind(){}
 	
 	public void sit() {
-		print("Pretending to sit") ;
+		println("Pretending to sit") ;
 	}
 	public void pushInvisibleWalls() {}
 	public String toString() {
@@ -17,10 +17,10 @@ class Mime{
 
 class SmartDog{
 	public void speak() {
-		print("Woof!");
+		println("Woof!");
 	}
 	public void sit() {
-		print("Sitting") ;
+		println("Sitting") ;
 	}
 	public void reproduce() {}
 }
@@ -33,13 +33,13 @@ class CommunicateReflectively{
 				Method speak = spkr.getMethod("speak") ;
 				speak.invoke(speaker) ;
 			} catch (NoSuchMethodException e) {
-				print(speaker + " cannot speak");
+				println(speaker + " cannot speak");
 			}
 			try {
 				Method sit = spkr.getMethod("sit") ;
 				sit.invoke(speaker) ;
 			} catch (NoSuchMethodException e) {
-				print(speaker + " cannot sit");
+				println(speaker + " cannot sit");
 			}
 		}catch(Exception e) {
 			throw new RuntimeException(speaker.toString(),e) ;

@@ -1,9 +1,9 @@
 package com.yicj.demo.init2;
-import static com.yicj.demo.CommonUtil.print ;
+import static com.yicj.demo.CommonUtil.println ;
 
 class Instrument{
 	public void play(Note n) {
-		print("Instrument.play()") ;
+		println("Instrument.play()") ;
 	}
 }
 class Wind extends Instrument{

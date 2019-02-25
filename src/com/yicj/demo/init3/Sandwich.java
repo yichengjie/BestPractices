@@ -1,39 +1,39 @@
 package com.yicj.demo.init3;
 
-import static com.yicj.demo.CommonUtil.print; 
+import static com.yicj.demo.CommonUtil.println; 
 
 class Meal {
 	Meal(){
-		print("Meal()");
+		println("Meal()");
 	}
 }
 class Bread {
 	Bread(){
-		print("Bread");
+		println("Bread");
 	}
 }
 
 class Cheese {
 	Cheese(){
-		print("Cheese()");
+		println("Cheese()");
 	}
 }
 
 class Lettuce {
 	Lettuce() {
-		print("Lettuce()");
+		println("Lettuce()");
 	}
 }
 
 class Lunch extends Meal{
 	Lunch(){
-		print("Lunch()");
+		println("Lunch()");
 	}
 }
 
 class PortableLunce extends Lunch{
 	PortableLunce() {
-		print("ProtableLunch");
+		println("ProtableLunch");
 	}
 }
 
@@ -47,7 +47,7 @@ public class Sandwich  extends PortableLunce {
 	
 	//Sandwich-->PortableLunce-->Lunch-->Meal
 	public Sandwich(){
-		print("Sandwich()");
+		println("Sandwich()");
 	}
 	public static void main(String[] args) {
 		new Sandwich() ;

@@ -1,6 +1,6 @@
 package com.yicj.demo.inner2;
 
-import static com.yicj.demo.CommonUtil.print; 
+import static com.yicj.demo.CommonUtil.println; 
 
 interface Incrementable {
 	void increment() ;
@@ -8,7 +8,7 @@ interface Incrementable {
 
 class MyIncrement{
 	public void increment() {
-		print("Ohter operation");
+		println("Ohter operation");
 	}
 	static void f(MyIncrement mi) {
 		mi.increment();
@@ -21,7 +21,7 @@ class Callee1 implements Incrementable{
 	@Override
 	public void increment() {
 		i++ ;
-		print(i);
+		println(i);
 	}
 }
 
@@ -33,7 +33,7 @@ class Callee2 extends MyIncrement{
 	public void increment() {
 		super.increment();
 		i ++ ;
-		print(i);
+		println(i);
 	}
 	private class Closure implements Incrementable{
 		@Override

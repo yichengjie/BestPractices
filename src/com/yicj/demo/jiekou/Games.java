@@ -1,5 +1,5 @@
 package com.yicj.demo.jiekou;
-import static com.yicj.demo.CommonUtil.print ;
+import static com.yicj.demo.CommonUtil.println ;
 interface Game{
 	boolean move();
 }
@@ -13,7 +13,7 @@ class Checkers implements Game{
 	private static final int MOVES = 3 ;
 	@Override
 	public boolean move() {
-		print("Checkers move " + moves) ;
+		println("Checkers move " + moves) ;
 		return ++moves != MOVES;
 	}
 }

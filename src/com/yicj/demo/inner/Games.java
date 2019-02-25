@@ -1,6 +1,6 @@
 package com.yicj.demo.inner;
 
-import static com.yicj.demo.CommonUtil.print;
+import static com.yicj.demo.CommonUtil.println;
 
 interface Game{
 	boolean move() ;
@@ -19,7 +19,7 @@ class Checkers implements Game{
 	
 	@Override
 	public boolean move() {
-		print("Checkers move " + moves);
+		println("Checkers move " + moves);
 		return ++moves != MOVES;
 	}
 	public static GameFactory factory = new GameFactory() {
@@ -36,7 +36,7 @@ class Chess implements Game{
 	private static final int MOVES = 4 ;
 	@Override
 	public boolean move() {
-		print("Chess move " + moves);
+		println("Chess move " + moves);
 		return ++moves != MOVES;
 	}
 	public static GameFactory factory = new GameFactory() {

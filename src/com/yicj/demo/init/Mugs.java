@@ -1,12 +1,12 @@
 package com.yicj.demo.init;
-import static com.yicj.demo.CommonUtil.print ;
+import static com.yicj.demo.CommonUtil.println ;
 
 class Mug{
 	Mug(int marker) {
-		print("Mug("+marker+")") ;
+		println("Mug("+marker+")") ;
 	}
 	void f(int marker) {
-		print("f("+marker+")") ;
+		println("f("+marker+")") ;
 	}
 }
 
@@ -18,20 +18,20 @@ public class Mugs {
 	{
 		mug1 = new Mug(1) ;
 		mug2 = new Mug(2) ;
-		print("mug1 & mug2 initialized") ;
+		println("mug1 & mug2 initialized") ;
 	}
 	Mugs() {
-		print("Mugs()");
+		println("Mugs()");
 	}
 	Mugs(int i){
-		print("Mugs(int)") ;
+		println("Mugs(int)") ;
 	}
 	public static void main(String[] args) {
-		print("Inside main()") ;
+		println("Inside main()") ;
 		new Mugs() ;
-		print("new Mugs() completed") ;
+		println("new Mugs() completed") ;
 		new Mugs(1) ;
-		print("new Mugs(1) completed") ;
+		println("new Mugs(1) completed") ;
 	}
 
 }

@@ -1,13 +1,13 @@
 package com.yicj.demo.init3;
 
-import static com.yicj.demo.CommonUtil.print;
+import static com.yicj.demo.CommonUtil.println;
 
 class Shared{
 	private int refcount = 0 ;
 	private static long counter = 0 ;
 	private final long id = counter ++ ;
 	public Shared() {
-		print("Creating " + this);
+		println("Creating " + this);
 	}
 	public void addRef() {
 		refcount ++ ;
@@ -15,7 +15,7 @@ class Shared{
 	protected void dispose() {
 		
 		if(--refcount == 0) {
-			print("Disposeing " + this);
+			println("Disposeing " + this);
 		}
 	}
 	public String toString() {
@@ -28,12 +28,12 @@ class Composing{
 	private static long counter = 0 ;
 	private final long id = counter ++ ;
 	public Composing(Shared shared) {
-		print("Creating " + this);
+		println("Creating " + this);
 		this.shared = shared ;
 		this.shared.addRef();
 	}
 	protected void dispose() {
-		print("disposing " + this);
+		println("disposing " + this);
 		shared.dispose();
 	}
 	@Override

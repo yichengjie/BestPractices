@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
-import static com.yicj.demo.CommonUtil.print;
+import static com.yicj.demo.CommonUtil.println;
 
 
 
@@ -156,19 +156,19 @@ public class Functional {
 		//Generics , varags & boxing working together :
 		List<Integer> li = Arrays.asList(1,2,3,4,5,6,7) ;
 		Integer result = reduce(li, new IntegerAdder()) ;
-		print(result);
+		println(result);
 		//
 		result = reduce(li, new IntegerSubtracter()) ;
-		print(forEach(li, new MultiplyingInteger()).result());
+		println(forEach(li, new MultiplyingInteger()).result());
 		//
 		MathContext mc = new MathContext(7) ;
 		List<BigDecimal> lbd = Arrays.asList(
 				new BigDecimal(1.2,mc) ,new BigDecimal(2.2,mc) ,
 				new BigDecimal(3.3,mc) ,new BigDecimal(4.4,mc)) ;
 		BigDecimal rbd = reduce(lbd, new BigDecimalAdder()) ;
-		print(rbd) ;
+		println(rbd) ;
 		//
-		print(filter(lbd, 
+		println(filter(lbd, 
 				new GreaterThan<BigDecimal>(new BigDecimal(3)))) ;
 		//
 		//Use the prime-generation facility of BigInteger:
@@ -178,20 +178,20 @@ public class Functional {
 			lbi.add(bi) ;
 			bi = bi.nextProbablePrime() ;
 		}
-		print(lbi);
+		println(lbi);
 		//
 		BigInteger rbi = reduce(lbi, new BigIntegerAdder()) ;
-		print(rbi) ;
+		println(rbi) ;
 		//The sum of this list of primes is also prime:
-		print(rbi.isProbablePrime(5));
+		println(rbi.isProbablePrime(5));
 		//
 		List<AtomicLong> lal = Arrays.asList(
 				new AtomicLong(11), new AtomicLong(47),
 				new AtomicLong(74), new AtomicLong(133)) ;
 		AtomicLong ral = reduce(lal, new AtomicLongAdder()) ;
-		print(ral);
+		println(ral);
 		//
-		print(transform(lbd, new BigDecimalUlp())) ;
+		println(transform(lbd, new BigDecimalUlp())) ;
 	}
 	
 }

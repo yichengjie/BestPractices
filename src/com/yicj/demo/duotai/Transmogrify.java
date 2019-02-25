@@ -1,5 +1,5 @@
 package com.yicj.demo.duotai;
-import static com.yicj.demo.CommonUtil.print ;
+import static com.yicj.demo.CommonUtil.println ;
 
 class Actor{
 	public void act() {}
@@ -7,13 +7,13 @@ class Actor{
 
 class HappyActor extends Actor{
 	public void act() {
-		print("HappyActor") ;
+		println("HappyActor") ;
 	}
 }
 
 class SadActor extends Actor{
 	public void act() {
-		print("SadActor");
+		println("SadActor");
 	}
 }
 

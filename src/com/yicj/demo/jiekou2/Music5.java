@@ -1,7 +1,7 @@
 package com.yicj.demo.jiekou2;
 
 import com.yicj.demo.init2.Note;
-import static com.yicj.demo.CommonUtil.print;
+import static com.yicj.demo.CommonUtil.println;
 
 interface Instrument{
 	// Compile-time constant:
@@ -14,39 +14,39 @@ interface Instrument{
 class Wind implements Instrument{
 	@Override
 	public void play(Note n) {
-		print(this + ".play() " + n);
+		println(this + ".play() " + n);
 	}
 	@Override
 	public String toString() {return "Wind";}
 	@Override
 	public void adjust() {
-		print(this + ".adjust()");
+		println(this + ".adjust()");
 	}
 }
 
 class Percussion implements Instrument{
 	@Override
 	public void play(Note n) {
-		print(this + ".play() "+ n);
+		println(this + ".play() "+ n);
 	}
 	@Override
 	public String toString() {return "Percussion";}
 	@Override
 	public void adjust() {
-		print(this + ".adjust()");
+		println(this + ".adjust()");
 	}
 }
 
 class Stringed implements Instrument{
 	@Override
 	public void play(Note n) {
-		print(this + ".play() " + n);
+		println(this + ".play() " + n);
 	}
 	@Override
 	public String toString() {return "Stringed";}
 	@Override
 	public void adjust() {
-		print(this + ".adjust()");
+		println(this + ".adjust()");
 	}
 }
 

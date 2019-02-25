@@ -117,12 +117,11 @@ public class GreenhouseControls extends Controller {
 		
 		@Override
 		public void action() {
-			// Put hardware control code here.
-			thermostat = "Day" ;
+			addEvent(new Bell(delayTime));
 		}
 		@Override
 		public String toString() {
-			return "Thermostat on day setting" ;
+			return "Bing" ;
 		}
 	}
 	

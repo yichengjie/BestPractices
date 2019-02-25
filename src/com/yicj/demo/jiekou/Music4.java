@@ -8,7 +8,7 @@ import com.yicj.demo.jiekou.Stringed;
 import com.yicj.demo.jiekou.Wind;
 import com.yicj.demo.jiekou.Woodwind;
 
-import static com.yicj.demo.CommonUtil.print;
+import static com.yicj.demo.CommonUtil.println;
 
 abstract class Instrument{
 	private int i ; //Storage allocated for each
@@ -22,7 +22,7 @@ abstract class Instrument{
 class Wind extends Instrument{
 	@Override
 	public void play(Note n) {
-		print("Wind.play() " + n);
+		println("Wind.play() " + n);
 	}
 	@Override
 	public String what() {return "Wind";}
@@ -33,7 +33,7 @@ class Wind extends Instrument{
 class Percussion extends Instrument{
 	@Override
 	public void play(Note n) {
-		print("Percussion.play() "+ n);
+		println("Percussion.play() "+ n);
 	}
 	@Override
 	public String what() {return "Percussion";}
@@ -44,7 +44,7 @@ class Percussion extends Instrument{
 class Stringed extends Instrument{
 	@Override
 	public void play(Note n) {
-		print("Stringed.play() " + n);
+		println("Stringed.play() " + n);
 	}
 	@Override
 	public String what() {return "Stringed";}
@@ -55,18 +55,18 @@ class Stringed extends Instrument{
 class Brass extends Wind{
 	@Override
 	public void play(Note n) {
-		print("Brass.play() " + n);
+		println("Brass.play() " + n);
 	}
 	@Override
 	public void adjust() {
-		print("Brass.adjust()");
+		println("Brass.adjust()");
 	}
 }
 
 class Woodwind extends Wind{
 	@Override
 	public void play(Note n) {
-		print("Woodwind.play() " + n);
+		println("Woodwind.play() " + n);
 	}
 	@Override
 	public String what() {

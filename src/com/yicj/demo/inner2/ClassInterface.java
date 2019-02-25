@@ -1,5 +1,5 @@
 package com.yicj.demo.inner2;
-import static com.yicj.demo.CommonUtil.print ;
+import static com.yicj.demo.CommonUtil.println ;
 
 
 public interface ClassInterface {
@@ -8,7 +8,7 @@ public interface ClassInterface {
 	class Test implements ClassInterface{
 		@Override
 		public void howdy() {
-			print("Howdy!");
+			println("Howdy!");
 		}
 		public static void main(String[] args) {
 			new Test().howdy();
