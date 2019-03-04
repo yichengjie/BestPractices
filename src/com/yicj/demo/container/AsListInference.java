@@ -22,8 +22,8 @@ public class AsListInference {
 			new Crusty(),new Slush(),new Powder()) ;
 		
 		// won't compile 
-		List<Snow> snow2 = Arrays.asList(
-			new Light(),new Heavy()) ;
+		//List<Snow> snow2 = Arrays.asList(
+			//new Light(),new Heavy()) ;
 		//found : java.util.List<Powder>
 		//required : java.util.List<Snow>
 		List<Snow> snow3 = new ArrayList<Snow>() ;

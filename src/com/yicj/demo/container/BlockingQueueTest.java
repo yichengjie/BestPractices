@@ -10,7 +10,7 @@ public class BlockingQueueTest {
 	//定义装苹果的篮子
 	public static class Basket{
 		//篮子，能够容纳3哥苹果
-		BlockingQueue<String> basket = new ArrayBlockingQueue<>(3) ;
+		BlockingQueue<String> basket = new ArrayBlockingQueue<String>(3) ;
 		//生产苹果,放入篮子	
 		public void produce() throws InterruptedException {
 			//put 方法放入一个苹果，若basket满了，等到basket有位置	
