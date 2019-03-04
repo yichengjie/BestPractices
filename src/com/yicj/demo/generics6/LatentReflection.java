@@ -1,5 +1,5 @@
 package com.yicj.demo.generics6;
-import static com.yicj.demo.CommonUtil.println;
+import static com.yicj.demo.util.CommonUtil.println;
 
 import java.lang.reflect.Method;
 

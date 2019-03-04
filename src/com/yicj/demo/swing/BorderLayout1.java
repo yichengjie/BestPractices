@@ -1,11 +1,11 @@
 package com.yicj.demo.swing;
 
+import static com.yicj.demo.util.SwingConsole.run;
+
 import java.awt.BorderLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-
-import static com.yicj.demo.SwingConsole.run ;
 
 public class BorderLayout1 extends JFrame {
 	

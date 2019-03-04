@@ -1,9 +1,10 @@
 package com.yicj.demo.regex;
 
+import static com.yicj.demo.util.CommonUtil.print;
+import static com.yicj.demo.util.CommonUtil.println;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import static com.yicj.demo.CommonUtil.print ;
-import static com.yicj.demo.CommonUtil.println ;
 
 public class Groups {
 	static public final String POEM = 

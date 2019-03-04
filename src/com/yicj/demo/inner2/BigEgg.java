@@ -1,6 +1,6 @@
 package com.yicj.demo.inner2;
 
-import static com.yicj.demo.CommonUtil.println;
+import static com.yicj.demo.util.CommonUtil.println;
 
 class Egg{
 	private Yolk y ;

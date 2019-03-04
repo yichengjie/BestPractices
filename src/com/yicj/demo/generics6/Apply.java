@@ -1,10 +1,10 @@
 package com.yicj.demo.generics6;
 
+import static com.yicj.demo.util.CommonUtil.println;
+
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.yicj.demo.CommonUtil.println;
 public class Apply {
 	public static <T,S extends Iterable<? extends T>> 
 	void apply(S seq ,Method f ,Object ...args) {

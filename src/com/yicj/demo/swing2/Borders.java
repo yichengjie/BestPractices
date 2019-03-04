@@ -1,5 +1,7 @@
 package com.yicj.demo.swing2;
 
+import static com.yicj.demo.util.SwingConsole.run;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
@@ -14,7 +16,6 @@ import javax.swing.border.EtchedBorder;
 import javax.swing.border.LineBorder;
 import javax.swing.border.MatteBorder;
 import javax.swing.border.TitledBorder;
-import static com.yicj.demo.SwingConsole.run ;
 
 
 public class Borders extends JFrame {

@@ -1,5 +1,7 @@
 package com.yicj.demo.generics6;
 
+import static com.yicj.demo.util.CommonUtil.println;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -8,8 +10,6 @@ import com.yicj.demo.generator1.Coffee;
 import com.yicj.demo.generator1.Generator;
 import com.yicj.demo.generator1.Latte;
 import com.yicj.demo.generator1.Mocha;
-
-import static com.yicj.demo.CommonUtil.println;
 
 interface Addable<T>{
 	void add(T t) ;

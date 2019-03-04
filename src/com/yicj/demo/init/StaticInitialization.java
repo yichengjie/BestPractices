@@ -1,6 +1,6 @@
 package com.yicj.demo.init;
 
-import static com.yicj.demo.CommonUtil.println;
+import static com.yicj.demo.util.CommonUtil.println;
 
 class Bowl{
 	public Bowl(int marker) {

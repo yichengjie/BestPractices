@@ -1,5 +1,5 @@
 package com.yicj.demo.regex;
-import static com.yicj.demo.CommonUtil.println ;
+import static com.yicj.demo.util.CommonUtil.println;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

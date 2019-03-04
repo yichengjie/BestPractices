@@ -1,7 +1,8 @@
 package com.yicj.demo.jiekou2;
 
+import static com.yicj.demo.util.CommonUtil.println;
+
 import com.yicj.demo.init2.Note;
-import static com.yicj.demo.CommonUtil.println;
 
 interface Instrument{
 	// Compile-time constant:

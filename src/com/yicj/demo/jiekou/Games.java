@@ -1,5 +1,5 @@
 package com.yicj.demo.jiekou;
-import static com.yicj.demo.CommonUtil.println ;
+import static com.yicj.demo.util.CommonUtil.println;
 interface Game{
 	boolean move();
 }

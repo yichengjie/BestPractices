@@ -1,5 +1,7 @@
 package com.yicj.demo.swing;
 
+import static com.yicj.demo.util.SwingConsole.run;
+
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,7 +11,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-import static com.yicj.demo.SwingConsole.run ;
 
 class Countries{
 	public static Map<String,String> capitals(){

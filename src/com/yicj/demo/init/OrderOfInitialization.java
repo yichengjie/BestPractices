@@ -1,5 +1,5 @@
 package com.yicj.demo.init;
-import static com.yicj.demo.CommonUtil.println;
+import static com.yicj.demo.util.CommonUtil.println;
 class Window{
 	public Window(int maker) {
 		println("Window("+maker+")") ;

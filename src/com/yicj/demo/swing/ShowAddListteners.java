@@ -1,5 +1,7 @@
 package com.yicj.demo.swing;
 
+import static com.yicj.demo.util.SwingConsole.run;
+
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,7 +14,6 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import static com.yicj.demo.SwingConsole.run ;
 
 public class ShowAddListteners extends JFrame{
 	private JTextField name = new JTextField(25) ;

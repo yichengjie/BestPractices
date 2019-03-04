@@ -1,8 +1,8 @@
 package com.yicj.demo.swing;
 
-import java.util.concurrent.TimeUnit;
+import static com.yicj.demo.util.SwingConsole.run;
 
-import static com.yicj.demo.SwingConsole.run ;
+import java.util.concurrent.TimeUnit;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;

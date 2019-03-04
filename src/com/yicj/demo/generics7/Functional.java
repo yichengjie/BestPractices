@@ -1,5 +1,7 @@
 package com.yicj.demo.generics7;
 
+import static com.yicj.demo.util.CommonUtil.println;
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.MathContext;
@@ -8,7 +10,6 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
-import static com.yicj.demo.CommonUtil.println;
 
 
 

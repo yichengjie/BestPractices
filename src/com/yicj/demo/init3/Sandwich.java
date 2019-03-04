@@ -1,6 +1,6 @@
 package com.yicj.demo.init3;
 
-import static com.yicj.demo.CommonUtil.println; 
+import static com.yicj.demo.util.CommonUtil.println; 
 
 class Meal {
 	Meal(){

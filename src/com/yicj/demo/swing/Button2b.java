@@ -1,5 +1,7 @@
 package com.yicj.demo.swing;
 
+import static com.yicj.demo.util.SwingConsole.run;
+
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,7 +9,6 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
-import static com.yicj.demo.SwingConsole.run ;
 public class Button2b extends JFrame{
 	private JButton 
 	  b1 = new JButton("Button 1") ,

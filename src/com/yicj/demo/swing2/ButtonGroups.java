@@ -1,5 +1,7 @@
 package com.yicj.demo.swing2;
 
+import static com.yicj.demo.util.SwingConsole.run;
+
 import java.awt.FlowLayout;
 import java.lang.reflect.Constructor;
 
@@ -12,7 +14,6 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JToggleButton;
 import javax.swing.border.TitledBorder;
-import static com.yicj.demo.SwingConsole.run ;
 
 public class ButtonGroups extends JFrame {
 	private static String[] ids = {

@@ -1,4 +1,4 @@
-package com.yicj.demo;
+package com.yicj.demo.util;
 
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;

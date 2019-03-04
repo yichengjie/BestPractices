@@ -1,6 +1,6 @@
 package com.yicj.demo.inner2;
-import static com.yicj.demo.CommonUtil.print;
-import static com.yicj.demo.CommonUtil.println;
+import static com.yicj.demo.util.CommonUtil.print;
+import static com.yicj.demo.util.CommonUtil.println;
 
 
 interface Counter{

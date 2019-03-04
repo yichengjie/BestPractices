@@ -1,5 +1,7 @@
 package com.yicj.demo.swing2;
 
+import static com.yicj.demo.util.SwingConsole.run;
+
 import java.awt.Button;
 import java.awt.FlowLayout;
 
@@ -10,8 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JToggleButton;
 import javax.swing.border.TitledBorder;
-import javax.swing.plaf.basic.BasicArrowButton;
-import static com.yicj.demo.SwingConsole.run; 
+import javax.swing.plaf.basic.BasicArrowButton; 
 public class Buttons extends JFrame {
 
 	private JButton jb = new JButton("JButton") ;

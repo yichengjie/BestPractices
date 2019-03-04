@@ -1,5 +1,5 @@
 package com.yicj.demo.str;
-import static com.yicj.demo.CommonUtil.println; 
+import static com.yicj.demo.util.CommonUtil.println; 
 
 
 public class Immutable {

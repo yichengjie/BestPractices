@@ -1,5 +1,7 @@
 package com.yicj.demo.jiekou;
 
+import static com.yicj.demo.util.CommonUtil.println;
+
 import com.yicj.demo.init2.Note;
 import com.yicj.demo.jiekou.Brass;
 import com.yicj.demo.jiekou.Instrument;
@@ -7,8 +9,6 @@ import com.yicj.demo.jiekou.Percussion;
 import com.yicj.demo.jiekou.Stringed;
 import com.yicj.demo.jiekou.Wind;
 import com.yicj.demo.jiekou.Woodwind;
-
-import static com.yicj.demo.CommonUtil.println;
 
 abstract class Instrument{
 	private int i ; //Storage allocated for each

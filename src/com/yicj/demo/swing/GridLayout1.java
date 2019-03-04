@@ -1,10 +1,11 @@
 package com.yicj.demo.swing;
 
+import static com.yicj.demo.util.SwingConsole.run;
+
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import static com.yicj.demo.SwingConsole.run ;
 
 public class GridLayout1 extends JFrame {
 	public GridLayout1(){

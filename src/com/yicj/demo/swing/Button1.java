@@ -1,10 +1,11 @@
 package com.yicj.demo.swing;
 
+import static com.yicj.demo.util.SwingConsole.run;
+
 import java.awt.FlowLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import static com.yicj.demo.SwingConsole.run ;
 
 public class Button1 extends JFrame {
 	private JButton b1 = new JButton("Button 1") ;

@@ -1,9 +1,10 @@
 package com.yicj.demo.swing;
 
+import static com.yicj.demo.util.SwingConsole.run;
+
 import java.awt.FlowLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import static com.yicj.demo.SwingConsole.run ;
 
 public class FlowLayout1 extends JFrame {
 	public FlowLayout1(){
