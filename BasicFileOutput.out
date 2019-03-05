@@ -1,0 +1,25 @@
+1: package com.yicj.demo.file;
+2: 
+3: import java.io.BufferedReader;
+4: import java.io.BufferedWriter;
+5: import java.io.FileWriter;
+6: import java.io.PrintWriter;
+7: import java.io.StringReader;
+8: 
+9: public class BasicFileOutput {
+10: 	static String path = "/Users/yicj/code/eclipse-workspace/BestPractices/src/com/yicj/demo/file/" ;
+11: 	static String file = "BasicFileOutput.out" ;
+12: 	public static void main(String[] args) throws Exception {
+13: 		BufferedReader in = new BufferedReader(
+14: 			new StringReader(
+15: 				BufferedInputFile.read(path + "BasicFileOutput.java"))) ;
+16: 		PrintWriter out = new PrintWriter(
+17: 			new BufferedWriter(new FileWriter(file))) ;
+18: 		int lineCount = 1 ;
+19: 		String s ;
+20: 		while( (s = in.readLine()) != null )
+21: 			out.println(lineCount ++ +": " + s);
+22: 		out.close(); 
+23: 		System.out.println(BufferedInputFile.read(file));
+24: 	}
+25: }
