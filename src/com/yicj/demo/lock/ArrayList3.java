@@ -58,7 +58,7 @@ public class ArrayList3<E> {
                lock.unlockRead(stamp);
            }
        }
-       return next ;
+       return size ;
     }
 
 }
