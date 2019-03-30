@@ -43,8 +43,5 @@ public class ArrayList <E>{
 			lock.unlock(); 
 		}
 	}
-	
-	
-	
-	
+
 }
