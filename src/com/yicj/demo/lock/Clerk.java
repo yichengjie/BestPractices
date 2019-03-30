@@ -39,13 +39,13 @@ public class Clerk {
     private void waitIfFull() throws InterruptedException {
 
         while (this.product != -1){
-            this.condition.wait();
+            this.condition.await();
         }
     }
 
     private void waitIfEmpty() throws InterruptedException {
         while(this.product == -1){
-            this.condition.wait();
+            this.condition.await();
         }
     }
 
