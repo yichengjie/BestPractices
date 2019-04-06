@@ -59,6 +59,11 @@ class SingleServer implements Runnable{
             e.printStackTrace();
         } finally {
             System.out.println(String.format("与客户端%d通信结束",this.clientNo));
+            try {
+                socket.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
