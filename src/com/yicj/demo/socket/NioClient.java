@@ -35,6 +35,7 @@ public class NioClient {
             //选择注册过的io操作事件(第一次为SelectionKey.OP_CONNECT)
             selector.select() ;
 
+
             Set<SelectionKey> selectionKeys = selector.selectedKeys();
 
             Iterator<SelectionKey> iter = selectionKeys.iterator();
