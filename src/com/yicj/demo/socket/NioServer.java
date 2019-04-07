@@ -35,22 +35,23 @@ public class NioServer {
         while (true){
             System.out.println("轮询...");
             selector.select() ;//每秒轮询
-            //获取selector中的迭代器，选中项为注册的事件
-            Iterator<SelectionKey> iter =
-                    selector.selectedKeys().iterator();
-            while (iter.hasNext()){
-                SelectionKey key = iter.next();
-                //删除已选key，防止重复处理
-                iter.remove();
-                //客户端请求连接事件
-                if (key.isAcceptable()){
-                    this.handleAccess(key);
-                }else if (key.isReadable()){
-                    this.handleRead(key);
+            this.handle();
+        }
+    }
 
-                }
+    private void handle() throws IOException {
+        //获取selector中的迭代器，选中项为注册的事件
+        Iterator<SelectionKey> iter = selector.selectedKeys().iterator();
+        while (iter.hasNext()){
+            SelectionKey key = iter.next();
+            //删除已选key，防止重复处理
+            iter.remove();
+            //客户端请求连接事件
+            if (key.isAcceptable()){
+                this.handleAccess(key);
+            }else if (key.isReadable()){
+                this.handleRead(key);
             }
-
         }
     }
 
