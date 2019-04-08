@@ -32,7 +32,8 @@ public class NIOServer3 {
     }
 
 
-    public void process(){
+    public void listen(){
+        System.out.println("服务器启动成功！");
         new Thread(new BoosProcessor(boosSelector,workSelector)).start();
         new Thread(new WorkProcessor(workSelector)).start();
     }
@@ -40,7 +41,7 @@ public class NIOServer3 {
 
     public static void main(String [] args) throws IOException {
 
-        new NIOServer3().init(8000).process(); ;
+        new NIOServer3().init(8000).listen(); ;
     }
 
 
