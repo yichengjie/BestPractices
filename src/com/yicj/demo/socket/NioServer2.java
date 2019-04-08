@@ -7,6 +7,7 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
+import java.nio.charset.Charset;
 import java.util.Iterator;
 
 public class NioServer2 {
@@ -66,8 +67,8 @@ class BoosTask implements Runnable{
         try{
             //使用轮询访问selector
             while (true){
-                System.out.println("轮询...");
-                boosSelector.select() ;//每秒轮询
+                //System.out.println("轮询...");
+                boosSelector.select(1) ;//每秒轮询
                 //获取selector中的迭代器，选中项为注册的事件
                 Iterator<SelectionKey> iter =
                         boosSelector.selectedKeys().iterator();
@@ -111,8 +112,8 @@ class WorkTask implements Runnable{
         try{
             //使用轮询访问selector
             while (true){
-                System.out.println("轮询...");
-                this.workSelector.select() ;//每秒轮询
+                //System.out.println("轮询...");
+                this.workSelector.select(1) ;//每秒轮询
                 //获取selector中的迭代器，选中项为注册的事件
                 Iterator<SelectionKey> iter =
                         this.workSelector.selectedKeys().iterator();
@@ -128,10 +129,14 @@ class WorkTask implements Runnable{
                         ByteBuffer buffer = ByteBuffer.allocate(10) ;
                         int read = channel.read(buffer) ;
                         if(read > 0){
-                            byte [] data = buffer.array() ;
-                            String message = new String(data) ;
-                            System.out.println("receive message from client size :"
-                                    +buffer.position() +", msg :" + message );
+                            buffer.flip();
+                            System.out.println("limit : " + buffer.limit());
+                            String msg = Charset.defaultCharset().newDecoder().decode(buffer).toString() ;
+                            System.out.println("msg : " + msg);
+                            //byte [] data = buffer.array() ;
+                            //String message = new String(data) ;
+                            //System.out.println("receive message from client size :"
+                            //        +buffer.position() +", msg :" + message );
                             //ByteBuffer out_buffer = ByteBuffer.wrap("server.".concat(message).getBytes()) ;
                             //channel.write(out_buffer) ;
                         }else {
