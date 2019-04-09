@@ -1,9 +1,9 @@
 package com.yicj.demo.tuple;
 import static com.yicj.demo.tuple.Tuple.* ;
 
-import com.yicj.demo.generator1.Americano;
-import com.yicj.demo.generator1.Coffee;
-import com.yicj.demo.generator1.Mocha;
+import com.yicj.demo.generator.generator1.Americano;
+import com.yicj.demo.generator.generator1.Coffee;
+import com.yicj.demo.generator.generator1.Mocha;
 
 public class TupleTest2 {
 

@@ -31,7 +31,7 @@ public final class Directory {
 		
 		public List<File> files = new ArrayList<File>() ;
 		public List<File> dirs = new ArrayList<File>() ;
-		// The default iterable elements is the file list:
+		// The default iterable elements is the file1 list:
 		
 		@Override
 		public Iterator<File> iterator() {
