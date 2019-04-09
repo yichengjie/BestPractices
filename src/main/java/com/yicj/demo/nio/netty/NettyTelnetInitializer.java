@@ -1,5 +1,7 @@
 package com.yicj.demo.nio.netty;
 
+import com.sun.security.ntlm.Server;
+import com.yicj.demo.nio.netty2.server.ServerHandler;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
@@ -17,16 +19,14 @@ public class NettyTelnetInitializer extends ChannelInitializer<SocketChannel> {
     protected void initChannel(SocketChannel channel) throws Exception {
 
         ChannelPipeline pipeline = channel.pipeline();
-
         // Add the text line codec combination first,
-        pipeline.addLast(new DelimiterBasedFrameDecoder(8192, Delimiters.lineDelimiter()));
-
+        //这句话加了就无法接受客户端发送的数据了
+        //pipeline.addLast(new DelimiterBasedFrameDecoder(8192, Delimiters.lineDelimiter()));
         // 添加编码和解码的类
-        pipeline.addLast(DECODER);
-        pipeline.addLast(ENCODER);
-
+        pipeline.addLast("decode",DECODER);
+        pipeline.addLast("encode", ENCODER);
         // 添加处理业务的类
-        pipeline.addLast(new NettyTelnetHandler());
+        pipeline.addLast("chat",new NettyTelnetHandler());
 
     }
 }

@@ -57,6 +57,6 @@ public class NettyServer {
     }
 
     public static void main(String[] args) {
-        new NettyServer(8899).run();
+        new NettyServer(8888).run();
     }
 }

@@ -38,10 +38,14 @@ public class NettyTelnetHandler extends SimpleChannelInboundHandler<String> {
             response = "Did you say '" + request + "'?\r\n";
         }
 
-        ChannelFuture future = ctx.write(response);
+        System.out.println("response: " + response);
+
+        ctx.channel().writeAndFlush(response) ;
+
+        /*ChannelFuture future = ctx.write(response);
         ctx.flush();
         if (close) {
             future.addListener(ChannelFutureListener.CLOSE);
-        }
+        }*/
     }
 }

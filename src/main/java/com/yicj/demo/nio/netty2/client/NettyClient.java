@@ -57,6 +57,6 @@ public class NettyClient {
     }
 
     public static void main(String[] args) throws Exception {
-        new NettyClient("127.0.0.1", 8899).run();
+        new NettyClient("127.0.0.1", 8888).run();
     }
 }
