@@ -23,10 +23,10 @@ public class NettyTelnetInitializer extends ChannelInitializer<SocketChannel> {
         //这句话加了就无法接受客户端发送的数据了
         //pipeline.addLast(new DelimiterBasedFrameDecoder(8192, Delimiters.lineDelimiter()));
         // 添加编码和解码的类
-        pipeline.addLast("decode",DECODER);
-        pipeline.addLast("encode", ENCODER);
+        pipeline.addLast(DECODER);
+        pipeline.addLast(ENCODER);
         // 添加处理业务的类
-        pipeline.addLast("chat",new NettyTelnetHandler());
+        pipeline.addLast(new NettyTelnetHandler());
 
     }
 }
