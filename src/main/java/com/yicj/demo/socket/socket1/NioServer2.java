@@ -20,7 +20,8 @@ public class NioServer2 {
     //获取一个ServerSocket通道，并初始化通道
     public NioServer2 init(int port) throws IOException {
         //获取一个ServerSocket通道
-        ServerSocketChannel serverChannel = ServerSocketChannel.open() ;
+        ServerSocketChannel serverChannel = null ;
+        serverChannel = ServerSocketChannel.open() ;
         serverChannel.configureBlocking(false) ;
         serverChannel.socket().bind(new InetSocketAddress(port));
         //获取通道管理器
@@ -68,7 +69,7 @@ class BoosTask implements Runnable{
             //使用轮询访问selector
             while (true){
                 //System.out.println("轮询...");
-                boosSelector.select(1) ;//每秒轮询
+                boosSelector.select(500) ;//每秒轮询
                 //获取selector中的迭代器，选中项为注册的事件
                 Iterator<SelectionKey> iter =
                         boosSelector.selectedKeys().iterator();
@@ -76,11 +77,13 @@ class BoosTask implements Runnable{
                     SelectionKey key = iter.next();
                     //删除已选key，防止重复处理
                     iter.remove();
+                    ServerSocketChannel server = null ;
+                    SocketChannel channel = null ;
                     //客户端请求连接事件
                     if (key.isAcceptable()){
-                        ServerSocketChannel server =  (ServerSocketChannel)key.channel() ;
+                        server =  (ServerSocketChannel)key.channel() ;
                         //获取客户端连接通道
-                        SocketChannel channel =  server.accept() ;
+                        channel =  server.accept() ;
                         channel.configureBlocking(false) ;
                         //向客户端发消息
                         ByteBuffer buf = ByteBuffer.wrap(new String("send message to client").getBytes()) ;
