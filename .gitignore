@@ -12,6 +12,6 @@ out/
 .idea
 BestPractices.iml
 Hello.iml
-target/
+target
 
 

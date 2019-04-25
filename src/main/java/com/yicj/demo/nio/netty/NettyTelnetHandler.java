@@ -10,6 +10,9 @@ import java.util.Date;
 
 public class NettyTelnetHandler extends SimpleChannelInboundHandler<String> {
 
+
+
+
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         // Send greeting for a new connection.
@@ -40,7 +43,7 @@ public class NettyTelnetHandler extends SimpleChannelInboundHandler<String> {
 
         System.out.println("response: " + response);
 
-        ctx.channel().writeAndFlush(response) ;
+        ctx.channel().writeAndFlush("hi") ;
 
         /*ChannelFuture future = ctx.write(response);
         ctx.flush();
