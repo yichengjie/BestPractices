@@ -5,7 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-import static com.yicj.demo.util.SwingConsole.run;
+import static com.yicj.demo.common.util.SwingConsole.run;
 
 import java.awt.Color;
 import java.awt.GridLayout;

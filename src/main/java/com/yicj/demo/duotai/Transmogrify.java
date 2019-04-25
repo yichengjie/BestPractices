@@ -1,5 +1,5 @@
 package com.yicj.demo.duotai;
-import static com.yicj.demo.util.CommonUtil.println;
+import static com.yicj.demo.common.util.CommonUtil.println;
 
 class Actor{
 	public void act() {}

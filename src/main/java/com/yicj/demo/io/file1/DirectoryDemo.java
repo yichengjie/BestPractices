@@ -1,10 +1,10 @@
 package com.yicj.demo.io.file1;
 
 import java.io.File;
-import static com.yicj.demo.util.CommonUtil.println;
+import static com.yicj.demo.common.util.CommonUtil.println;
 
-import com.yicj.demo.util.Directory;
-import com.yicj.demo.util.PPrint;
+import com.yicj.demo.common.util.Directory;
+import com.yicj.demo.common.util.PPrint;
 
 public class DirectoryDemo {
 	

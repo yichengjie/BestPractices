@@ -1,5 +1,5 @@
 package com.yicj.demo.inner.inner1;
-import static com.yicj.demo.util.CommonUtil.println; 
+import static com.yicj.demo.common.util.CommonUtil.println;
 
 abstract class Base{
 	public Base(int i) {

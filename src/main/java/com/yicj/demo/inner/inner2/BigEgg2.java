@@ -1,6 +1,6 @@
 package com.yicj.demo.inner.inner2;
 
-import static com.yicj.demo.util.CommonUtil.println;
+import static com.yicj.demo.common.util.CommonUtil.println;
 
 class Egg2{
 	protected class Yolk{

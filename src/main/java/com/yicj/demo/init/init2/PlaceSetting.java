@@ -1,5 +1,5 @@
 package com.yicj.demo.init.init2;
-import static com.yicj.demo.util.CommonUtil.println;
+import static com.yicj.demo.common.util.CommonUtil.println;
 
 class Plate{
 	Plate(int i){

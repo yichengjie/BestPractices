@@ -5,8 +5,8 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.HashMap;
 import java.util.Map;
-import static com.yicj.demo.tuple.Tuple.* ;
-import com.yicj.demo.tuple.TwoTuple;
+
+import com.yicj.demo.common.tuple.TwoTuple;
 
 
 class MixinProxy implements InvocationHandler{

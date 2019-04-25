@@ -1,6 +1,6 @@
 package com.yicj.demo.swing.swing2;
 
-import static com.yicj.demo.util.SwingConsole.run;
+import static com.yicj.demo.common.util.SwingConsole.run;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

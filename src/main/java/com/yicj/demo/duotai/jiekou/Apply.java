@@ -1,5 +1,5 @@
 package com.yicj.demo.duotai.jiekou;
-import static com.yicj.demo.util.CommonUtil.println;
+import static com.yicj.demo.common.util.CommonUtil.println;
 
 import java.util.Arrays;
 

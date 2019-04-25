@@ -1,6 +1,6 @@
 package com.yicj.demo.generics.generics7;
 
-import static com.yicj.demo.util.CommonUtil.println;
+import static com.yicj.demo.common.util.CommonUtil.println;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
