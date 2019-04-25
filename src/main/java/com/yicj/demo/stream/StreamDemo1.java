@@ -17,14 +17,14 @@ public class StreamDemo1 {
 	
 	public static void test005() {
 		Stream.of(1.0,2.0,3.0)
-		.mapToInt(Double::intValue) //double类型转int
-		.mapToObj(i -> "a" + 1) //对值拼接前缀a
+		.mapToInt(Double::intValue)
+		.mapToObj(i -> "a" + 1)
 		.forEach(System.out::println);
 	}
 	
 	public static void test004() {
 		IntStream.range(1, 4)
-		.mapToObj(i -> "a" + i) //for循环1-4，并拼接前缀a
+		.mapToObj(i -> "a" + i)
 		.forEach(System.out::println);
 	}
 
@@ -44,11 +44,11 @@ public class StreamDemo1 {
 	private static void test001() {
 		List<String> myList =
 			    Arrays.asList("a1", "a2", "b1", "c2", "c1");
-		myList.stream()//创建流
-		.filter(s->s.startsWith("c"))//执行过滤，过滤出以c为前缀的字符串
-		.map(String::toUpperCase)//转换成大写
-		.sorted()//排序
-		.forEach(System.out::println);//for循环打印
+		myList.stream()
+		.filter(s->s.startsWith("c"))
+		.map(String::toUpperCase)
+		.sorted()
+		.forEach(System.out::println);
 	}
 
 }

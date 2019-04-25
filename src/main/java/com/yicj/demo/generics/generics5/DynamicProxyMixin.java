@@ -8,6 +8,8 @@ import java.util.Map;
 
 import com.yicj.demo.common.tuple.TwoTuple;
 
+import static com.yicj.demo.common.tuple.Tuple.tuple;
+
 
 class MixinProxy implements InvocationHandler{
 	
