@@ -3,7 +3,7 @@ package com.yicj.demo.stream;
 import java.util.List;
 
 public class StreamDemo7 {
-	static List<Person> persons = Person.getDBPerson() ;
+static List<Person> persons = Person.getDBPerson() ;
 	
 	public static void main(String[] args) {
 		//test002();
@@ -14,14 +14,14 @@ public class StreamDemo7 {
 	}
 	
 	
-	//É¸Ñ¡³öÄêÁä×î´óµÄÄÇ¸öÈË
+	//ç­›é€‰å‡ºå¹´é¾„æœ€å¤§çš„é‚£ä¸ªäºº
 	private static void test001() {
 		persons.stream()
 		.reduce((p1,p2)-> p1.age > p2.age?p1:p2)
 		.ifPresent(System.out::println);
 	}
 	
-	//º¬À´×ÔÁ÷ÖÐËùÓÐÆäËûÈËµÄ¾ÛºÏÃû³ÆºÍÄêÁä
+	//å«æ¥è‡ªæµä¸­æ‰€æœ‰å…¶ä»–äººçš„èšåˆåç§°å’Œå¹´é¾„
 	private static void test002() {
 		Person result = persons.stream()
 		.reduce(new Person("", 0),(p1,p2)->{
@@ -67,7 +67,5 @@ public class StreamDemo7 {
 	        });
 		System.out.println("ageSum : " + ageSum);
 	}
-	
-	
 	
 }
