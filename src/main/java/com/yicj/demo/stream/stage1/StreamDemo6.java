@@ -1,8 +1,12 @@
-package com.yicj.demo.stream;
+package com.yicj.demo.stream.stage1;
 
 import java.util.List;
 import java.util.ArrayList ;
 import java.util.stream.IntStream;
+
+import com.yicj.demo.stream.Model;
+import com.yicj.demo.stream.Model.Bar;
+import com.yicj.demo.stream.Model.Foo;
 
 public class StreamDemo6 {
 
@@ -22,7 +26,6 @@ public class StreamDemo6 {
             IntStream
                 .range(1,4)
                 .forEach(i-> foo.bars.add(new Model.Bar("Bar" + i +"<-" + foo.name))));
-
 
         foos.stream().flatMap(f->f.bars.stream())
         .forEach(bar -> System.out.println(bar.name));

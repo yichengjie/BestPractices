@@ -1,10 +1,11 @@
-package com.yicj.demo.stream;
+package com.yicj.demo.stream.stage1;
 
 import java.util.List;
 import java.util.Map;
 import java.util.StringJoiner;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
+import com.yicj.demo.stream.Person;
 
 public class StreamDemo5 {
 

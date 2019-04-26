@@ -1,8 +1,10 @@
-package com.yicj.demo.stream;
+package com.yicj.demo.stream.stage1;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ForkJoinPool;
+
+import com.yicj.demo.stream.Person;
 
 public class StreamDemo8 {
 	

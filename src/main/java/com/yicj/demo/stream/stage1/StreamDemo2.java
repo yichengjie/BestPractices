@@ -1,4 +1,4 @@
-package com.yicj.demo.stream;
+package com.yicj.demo.stream.stage1;
 
 import java.util.stream.Stream;
 

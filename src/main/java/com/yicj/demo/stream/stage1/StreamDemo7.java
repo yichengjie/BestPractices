@@ -1,6 +1,8 @@
-package com.yicj.demo.stream;
+package com.yicj.demo.stream.stage1;
 
 import java.util.List;
+
+import com.yicj.demo.stream.Person;
 
 public class StreamDemo7 {
 static List<Person> persons = Person.getDBPerson() ;
