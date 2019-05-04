@@ -39,6 +39,7 @@ class MyBind {
 	public void bind(Object param) {
 		this.params.add(param) ;
 	}
+
 	public Object execute(Method m,Object ...tailParams) {
 		Object retObj =  null ;
 		int len1 = this.params.size() ;
@@ -88,8 +89,6 @@ public class Bind1 {
 		Object retObj = myBind.execute(m,3) ;
 		System.out.println(retObj);
 	}
-	
-	
-	
+
 
 }
