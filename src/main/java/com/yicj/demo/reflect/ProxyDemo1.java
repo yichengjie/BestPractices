@@ -1,6 +1,8 @@
 package com.yicj.demo.reflect;
 import com.yicj.demo.common.util.LoggingHandler;
 
+import java.util.Scanner;
+
 
 public class ProxyDemo1 {
 
@@ -8,6 +10,13 @@ public class ProxyDemo1 {
         LoggingHandler<Hello> loggingHandler = new LoggingHandler<>() ;
         Hello helloProxy = loggingHandler.bind(new HelloSpeaker()) ;
         helloProxy.hello("Justin");
+
+        Scanner scanner = new Scanner(System.in) ;
+        System.out.print("请输入：");
+        String input =  scanner.next() ;
+
+        System.out.println("你输入："+input);
+
     }
 
     interface Hello {
