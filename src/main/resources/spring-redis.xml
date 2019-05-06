@@ -30,13 +30,16 @@
         <!--<property name="password" ref="redisPassword" />-->
         <property name="database" value="${redis.dbIndex}"/>
     </bean>
+
+
+
     <!--配置jedis链接工厂 spring-data-redis2.0中
-        建议改为构造器传入一个RedisStandaloneConfiguration  单机
-                            RedisSentinelConfiguration  主从复制
-                            RedisClusterConfiguration  集群-->
+       建议改为构造器传入一个RedisStandaloneConfiguration  单机
+       RedisSentinelConfiguration  主从复制
+       RedisClusterConfiguration  集群-->
     <bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
         <!--注销掉的部分为spring-data-redis2.0以下的版本配置的方式-->
-        <!--  <property name="hostName" value="${redis.host}"/>
+        <!--<property name="hostName" value="${redis.host}"/>
           <property name="port" value="${redis.port}"/>
           <property name="poolConfig" ref="jedisPoolConfig"/>
           <property name="password" value="${redis.auth}" />
