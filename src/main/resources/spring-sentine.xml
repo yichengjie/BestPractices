@@ -25,9 +25,9 @@
         <constructor-arg index="0" value="${redis.master}"/>
         <constructor-arg index="1">
             <set>
-                <value>xxx.xxx.xxx.xxx:26379</value>
-                <value>xxx.xxx.xxx.xxx:26380</value>
-                <value>xxx.xxx.xxx.xxx:26381</value>
+                <value>${redis.sentine.1}</value>
+                <value>${redis.sentine.2}</value>
+                <value>${redis.sentine.3}</value>
             </set>
         </constructor-arg>
         <property name="database" value="${redis.database}"/>
