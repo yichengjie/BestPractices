@@ -25,6 +25,5 @@ public class BufferedIO {
 			input.close(); 
 			output.close();
 		}
-		
 	}
 }
