@@ -7,6 +7,6 @@ public class RedisTest {
         Jedis jedis =
                 RedisPool.getJedis();
         jedis.select(2);
-        System.out.println("Á´½Ó³É¹¦£¡");
+        System.out.println("");
     }
 }

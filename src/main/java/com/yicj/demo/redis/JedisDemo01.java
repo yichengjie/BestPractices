@@ -11,7 +11,6 @@ public class JedisDemo01 {
 	
 	
 	public static void main(String[] args) {
-		 //连接本地的 Redis 服务
         System.out.println("Connection to server sucessfully");
         JedisDemo01 demo = new JedisDemo01() ;
         demo.test();
@@ -28,7 +27,7 @@ public class JedisDemo01 {
 		Set<String> list1 =jedis.keys("*");
 	    Iterator<String> ite=list1.iterator();
 	    while(ite.hasNext()){
-	        System.out.println("这是key======:"+ite.next());
+	        System.out.println("y======:"+ite.next());
 	    }
 	}
 	
