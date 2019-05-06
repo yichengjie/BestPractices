@@ -8,4 +8,11 @@ rtest.dat
 test.dat
 test.out
 temp.tmp
+out/
+.idea
+BestPractices.iml
+Hello.iml
+target
+
+
 .idea/
