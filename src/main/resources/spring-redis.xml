@@ -27,7 +27,7 @@
     <bean id="redisStandaloneConfiguration" class="org.springframework.data.redis.connection.RedisStandaloneConfiguration">
         <property name="hostName" value="${redis.host}"/>
         <property name="port" value="${redis.port}"/>
-        <!--<property name="password" ref="redisPassword" />-->
+        <property name="password" ref="redisPassword" />
         <property name="database" value="${redis.dbIndex}"/>
     </bean>
 
