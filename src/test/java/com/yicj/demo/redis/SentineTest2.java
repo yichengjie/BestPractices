@@ -21,8 +21,8 @@ public class SentineTest2 {
     public void test1(){
         ValueOperations valueOperations = redisTemplate.opsForValue();
         valueOperations.set("first","hellow word");
-        byte[] names = (byte[]) valueOperations.get("name") ;
+        valueOperations.set("name","yicj");
         System.out.println("=====> : " + valueOperations.get("first"));
-        System.out.println("=====> : " + new String(names).toString());
+        System.out.println("=====> : " + valueOperations.get("name"));
     }
 }
