@@ -19,13 +19,10 @@ public class SentinelTest {
         String masterName="mymaster";
         //sentinel地址集合
         Set<String>set=new HashSet<String>();
-        //set.add("10.221.147.32:26379");
-        //set.add("10.221.147.32:26380");
-        //set.add("10.221.147.32:26381");
 
-        set.add("10.221.148.86:6382") ;
-        set.add("10.221.148.87:6382") ;
-        set.add("10.221.148.88:6382") ;
+        set.add("192.168.99.164:26379") ;
+        set.add("192.168.99.164:26380") ;
+        set.add("192.168.99.164:26381") ;
 
         GenericObjectPoolConfig gPoolConfig=new GenericObjectPoolConfig();
         gPoolConfig.setMaxIdle(10);
