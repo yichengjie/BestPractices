@@ -1,6 +1,5 @@
 package com.yicj.demo.datetime;
 
-import java.text.DateFormat;
 import java.util.Date;
 import static java.lang.System.out;
 import static java.text.DateFormat.*;
