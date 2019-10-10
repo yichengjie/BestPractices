@@ -4,7 +4,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import static com.yicj.study.common.util.SwingConsole.run;
+
+import static com.yicj.common.util.SwingConsole.run;
+
 import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.FocusEvent;

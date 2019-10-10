@@ -1,6 +1,6 @@
 package com.yicj.inner.s2;
 
-import static com.yicj.study.common.util.CommonUtil.println;
+import static com.yicj.common.util.CommonUtil.println;
 
 interface Incrementable {
 	void increment() ;

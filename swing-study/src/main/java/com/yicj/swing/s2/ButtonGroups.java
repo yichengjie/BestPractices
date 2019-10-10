@@ -1,6 +1,6 @@
 package com.yicj.swing.s2;
 
-import static com.yicj.study.common.util.SwingConsole.run;
+import static com.yicj.common.util.SwingConsole.run;
 
 import java.awt.FlowLayout;
 import java.lang.reflect.Constructor;

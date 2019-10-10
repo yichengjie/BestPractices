@@ -1,12 +1,14 @@
 package com.yicj.generics.s5;
 
-import static com.yicj.study.common.tuple.Tuple.tuple;
+import static com.yicj.common.tuple.Tuple.tuple;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.HashMap;
 import java.util.Map;
-import com.yicj.study.common.tuple.TwoTuple;
+
+import com.yicj.common.tuple.TwoTuple;
 
 
 class MixinProxy implements InvocationHandler{

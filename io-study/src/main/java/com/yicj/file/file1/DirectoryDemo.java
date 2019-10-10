@@ -1,9 +1,11 @@
 package com.yicj.file.file1;
 
+import static com.yicj.common.util.CommonUtil.println;
+
 import java.io.File;
-import static com.yicj.study.common.util.CommonUtil.println;
-import com.yicj.study.common.util.Directory;
-import com.yicj.study.common.util.PPrint;
+
+import com.yicj.common.util.Directory;
+import com.yicj.common.util.PPrint;
 
 public class DirectoryDemo {
 	

@@ -1,8 +1,8 @@
 package com.yicj.generator;
 
-import com.yicj.study.common.CountedObject;
-import com.yicj.study.common.generator.Generator;
-import com.yicj.study.common.util.BasicGenerator;
+import com.yicj.common.CountedObject;
+import com.yicj.common.generator.Generator;
+import com.yicj.common.util.BasicGenerator;
 
 public class BasicGeneratorDemo {
 	public static void main(String[] args) {

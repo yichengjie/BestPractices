@@ -1,7 +1,7 @@
 package com.yicj.reflect;
-import com.yicj.study.common.util.LoggingHandler;
-
 import java.util.Scanner;
+
+import com.yicj.common.util.LoggingHandler;
 
 
 public class ProxyDemo1 {

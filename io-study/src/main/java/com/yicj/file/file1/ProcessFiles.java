@@ -3,7 +3,7 @@ package com.yicj.file.file1;
 import java.io.File;
 import java.io.IOException;
 
-import com.yicj.study.common.util.Directory;
+import com.yicj.common.util.Directory;
 
 public class ProcessFiles {
 	

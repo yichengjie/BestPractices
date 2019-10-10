@@ -1,6 +1,6 @@
 package com.yicj.init.s3;
 
-import static com.yicj.study.common.util.CommonUtil.println;
+import static com.yicj.common.util.CommonUtil.println;
 
 class Shared{
 	private int refcount = 0 ;
