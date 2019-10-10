@@ -9,11 +9,11 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>helloworld</module>
-        <module>interview</module>
-        <module>annotation</module>
-        <module>container</module>
+        <module>mianshi-study</module>
+        <module>annotation-study</module>
+        <module>container-study</module>
         <module>common</module>
-        <module>constructor</module>
+        <module>constructor-study</module>
         <module>log4j-study</module>
         <module>lambda-study</module>
         <module>io-study</module>
