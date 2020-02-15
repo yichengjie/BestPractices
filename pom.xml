@@ -31,6 +31,7 @@
         <module>generator-study</module>
         <module>generics-study</module>
         <module>codec-study</module>
+        <module>jetty-study</module>
     </modules>
     <packaging>pom</packaging>
 
