@@ -22,7 +22,6 @@
         <module>duotai-study</module>
         <module>init-study</module>
         <module>string-study</module>
-        <module>stream</module>
         <module>stream-study</module>
         <module>swing-study</module>
         <module>thread-study</module>
