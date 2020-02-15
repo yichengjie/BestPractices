@@ -30,6 +30,7 @@
         <module>redis-study</module>
         <module>generator-study</module>
         <module>generics-study</module>
+        <module>codec-study</module>
     </modules>
     <packaging>pom</packaging>
 
