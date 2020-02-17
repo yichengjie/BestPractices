@@ -32,6 +32,7 @@
         <module>generics-study</module>
         <module>codec-study</module>
         <module>jetty-study</module>
+        <module>spring-core</module>
     </modules>
     <packaging>pom</packaging>
 
