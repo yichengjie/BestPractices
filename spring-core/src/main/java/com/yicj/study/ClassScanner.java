@@ -20,8 +20,11 @@ public class ClassScanner {
         String path = packageName.replace(".",sp) ;
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         Enumeration<URL> resources = classLoader.getResources(path);
+        System.out.println("flag : " + resources.hasMoreElements());
         while (resources.hasMoreElements()){
             URL resource = resources.nextElement();
+            String path1 = resource.getPath();
+            System.out.println("path : " + path);
             if(resource.getProtocol().contains("jar")){
                 JarURLConnection jarURLConnection =
                         (JarURLConnection) resource.openConnection() ;

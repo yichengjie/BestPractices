@@ -19,11 +19,12 @@
                 <version>3.0.2</version>
                 <configuration>
                     <archive>
-                        <manifestEntries>
-                            <!--Premain-Class为key，这个<Premain-Class>中的值为value -->
-                            <Premain-Class>com.yicj.study.Application</Premain-Class>
-                            <Can-Redefine-Classes>true</Can-Redefine-Classes>
-                        </manifestEntries>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <!-- 主方法所在类名 -->
+                            <mainClass>com.yicj.study.Application2</mainClass>
+                        </manifest>
                     </archive>
                 </configuration>
             </plugin>
