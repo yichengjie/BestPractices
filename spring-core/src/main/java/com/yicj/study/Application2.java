@@ -8,6 +8,6 @@ public class Application2 {
 
     public static void main(String[] args) throws Exception {
         Set<Class<?>> classes = ClassScanner2.getClasses("com.yicj");
-        System.out.println(classes);
+        classes.forEach(name-> System.out.println(name));
     }
 }
