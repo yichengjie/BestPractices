@@ -1,4 +1,4 @@
-package com.yicj.study;
+package com.yicj.study.scanner;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -16,6 +16,7 @@ import java.util.jar.JarFile;
 
 public class ClassScanner2 {
 
+
     /**
      * 从包package中获取所有的Class
      * @param packageName
@@ -28,10 +29,11 @@ public class ClassScanner2 {
         boolean recursive = true;
         // 获取包的名字 并进行替换
         String packageDirName = packageName.replace('.', '/');
+        //String packageDirName = packageName.replace('.', File.separatorChar);
+        System.out.println("packageDirName : " + packageDirName);
         // 定义一个枚举的集合 并进行循环来处理这个目录下的things
-        Enumeration<URL> dirs;
-        dirs = Thread.currentThread().getContextClassLoader().getResources(
-                packageDirName);
+        Enumeration<URL> dirs = Thread.currentThread().getContextClassLoader()
+                .getResources(packageDirName);
         // 循环迭代下去
         while (dirs.hasMoreElements()) {
             // 获取下一个元素
@@ -39,6 +41,7 @@ public class ClassScanner2 {
             // 得到协议的名称
             String protocol = url.getProtocol();
             System.out.println("path : " + url.getPath());
+            System.out.println("protocol : " + protocol);
             // 如果是以文件的形式保存在服务器上
             if ("file".equals(protocol)) {
                 System.out.println("file类型的扫描");

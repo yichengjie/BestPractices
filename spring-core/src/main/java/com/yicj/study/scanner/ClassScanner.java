@@ -1,4 +1,4 @@
-package com.yicj.study;
+package com.yicj.study.scanner;
 
 import java.io.File;
 import java.io.IOException;
