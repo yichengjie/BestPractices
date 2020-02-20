@@ -6,9 +6,7 @@ import java.io.IOException;
 import java.net.JarURLConnection;
 import java.net.URL;
 import java.net.URLDecoder;
-import java.util.Enumeration;
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.*;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 public class ClassScanner2 {
@@ -18,9 +16,9 @@ public class ClassScanner2 {
      * @param packageName
      * @return
      */
-    public static Set<Class<?>> getClasses(String packageName) throws Exception {
+    public static List<Class<?>> getClasses(String packageName) throws Exception {
         // 第一个class类的集合
-        Set<Class<?>> classes = new LinkedHashSet<Class<?>>();
+        List<Class<?>> classes = new ArrayList<>();
         // 是否循环迭代
         boolean recursive = true;
         // 获取包的名字 并进行替换
@@ -129,7 +127,7 @@ public class ClassScanner2 {
      */
     public static void findAndAddClassesInPackageByFile(
             String packageName, String packagePath,
-            final boolean recursive, Set<Class<?>> classes) {
+            final boolean recursive, List<Class<?>> classes) {
         // 获取此包的目录 建立一个File
         File dir = new File(packagePath);
         // 如果不存在或者 也不是目录就直接返回
