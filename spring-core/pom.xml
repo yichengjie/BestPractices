@@ -31,8 +31,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <!-- 主方法所在类名 -->
-                            <mainClass>com.yicj.study.Application2</mainClass>
+                            <mainClass>com.yicj.study.Application</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
