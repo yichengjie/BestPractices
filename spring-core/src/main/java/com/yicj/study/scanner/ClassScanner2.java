@@ -1,7 +1,7 @@
 package com.yicj.study.scanner;
 
+import sun.reflect.Reflection;
 import java.io.File;
-import java.io.FileFilter;
 import java.io.IOException;
 import java.net.JarURLConnection;
 import java.net.URL;
@@ -12,7 +12,6 @@ import java.util.Set;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 public class ClassScanner2 {
-
 
     /**
      * 从包package中获取所有的Class
@@ -96,22 +95,22 @@ public class ClassScanner2 {
             // 如果以"/"结尾，是一个包
             if (idx != -1) {
                 // 获取包名 把"/"替换成"."
-                packageName = name.substring(0, idx)
-                        .replace('/', '.');
+                packageName = name.substring(0, idx).replace('/', '.');
             }
             // 如果可以迭代下去,并且是一个包
             if ((idx != -1) || recursive) {
                 // 如果是一个.class文件 而且不是目录
-                if (name.endsWith(".class")
-                        && !entry.isDirectory()) {
+                if (name.endsWith(".class") && !entry.isDirectory()) {
                     // 去掉后面的".class" 获取真正的类名
                     String className = name.substring(
                             packageName.length() + 1, name.length() - 6);
                     try {
                         // 添加到classes
+                        //经过回复同学的提醒，这里用forName有一些不好，会触发static方法，没有使用classLoader的load干净
                         classes.add(Class.forName(packageName + '.' + className));
+                        /*ClassLoader contextClassLoader = Thread.currentThread().getContextClassLoader();
+                        classes.add(contextClassLoader.loadClass(packageName + '.' + className));*/
                     } catch (ClassNotFoundException e) {
-                        // log
                         // .error("添加用户自定义视图类错误 找不到此类的.class文件");
                         e.printStackTrace();
                     }
