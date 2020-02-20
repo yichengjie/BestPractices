@@ -1,11 +1,13 @@
 package com.yicj.study.handler;
 
 import com.yicj.study.bean.BeanFactory;
+import lombok.ToString;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.lang.reflect.Method;
 
+@ToString
 public class MappingHandler {
     private String uri ;
     private Method method ;

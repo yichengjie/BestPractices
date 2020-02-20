@@ -17,17 +17,19 @@ public class TomcatServer {
     public void startServer(){
         try {
             tomcat = new Tomcat() ;
+            tomcat.setHostname("127.0.0.1");
             tomcat.setPort(8080);
-            tomcat.start();
 
             Context context = new StandardContext();
             context.setPath("");
             context.addLifecycleListener(new Tomcat.FixContextListener());
 
             DispatcherServlet servlet = new DispatcherServlet();
+
             Tomcat.addServlet(context, "dispatcherServlet", servlet).setAsyncSupported(true);
             context.addServletMappingDecoded("/", "dispatcherServlet");
             tomcat.getHost().addChild(context);
+            tomcat.start();
 
             Thread awaitThread = new Thread("tomcat_await_thread"){
                 @Override
@@ -37,6 +39,7 @@ public class TomcatServer {
             };
             awaitThread.setDaemon(false);
             awaitThread.start();
+
         }catch (Exception e){
             throw new RuntimeException(e) ;
         }

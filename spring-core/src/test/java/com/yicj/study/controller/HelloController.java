@@ -13,6 +13,7 @@ public class HelloController {
     @AutoWired
     private HelloService helloService ;
 
+    @RequestMapping("/hello")
     public Integer hello(@RequestParam("name") String name, @RequestParam("age") String age){
 
         return this.helloService.hello(name,age) ;

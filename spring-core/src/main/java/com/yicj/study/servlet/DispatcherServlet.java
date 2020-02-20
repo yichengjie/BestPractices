@@ -16,6 +16,7 @@ public class DispatcherServlet implements Servlet {
                 return;
             }
         }
+        resp.getWriter().println("404"); ;
     }
 
     @Override
