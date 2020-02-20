@@ -19,12 +19,14 @@ public class TomcatServer {
             tomcat = new Tomcat() ;
             tomcat.setPort(8080);
             tomcat.start();
-            Context context = new StandardContext() ;
+
+            Context context = new StandardContext();
             context.setPath("");
             context.addLifecycleListener(new Tomcat.FixContextListener());
-            DispatcherServlet servlet = new DispatcherServlet() ;
-            Tomcat.addServlet(context,"dispatcherServlet",servlet).setAsyncSupported(true);
-            context.addServletMappingDecoded("/","dispatcherServlet");
+
+            DispatcherServlet servlet = new DispatcherServlet();
+            Tomcat.addServlet(context, "dispatcherServlet", servlet).setAsyncSupported(true);
+            context.addServletMappingDecoded("/", "dispatcherServlet");
             tomcat.getHost().addChild(context);
 
             Thread awaitThread = new Thread("tomcat_await_thread"){
@@ -32,10 +34,9 @@ public class TomcatServer {
                 public void run() {
                     TomcatServer.this.tomcat.getServer().await();
                 }
-            } ;
+            };
             awaitThread.setDaemon(false);
             awaitThread.start();
-
         }catch (Exception e){
             throw new RuntimeException(e) ;
         }

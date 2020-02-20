@@ -14,6 +14,6 @@ public class MiniApplication {
         List<Class<?>> classes = ClassScanner2.scanClasses(cls.getPackage().getName());
         BeanFactory.initBean(classes);
         HandlerManager.resolveMappingHandler(classes); ;
-        classes.forEach(clazz -> System.out.println(clazz));
+        //classes.forEach(clazz -> System.out.println(clazz));
     }
 }
