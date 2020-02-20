@@ -32,7 +32,9 @@
         <module>generics-study</module>
         <module>codec-study</module>
         <module>jetty-study</module>
-        <module>spring-core</module>
+        <module>mini-spring</module>
+        <module>mini-spring-framework</module>
+        <module>mini-spring/mini-spring-test</module>
     </modules>
     <packaging>pom</packaging>
 
