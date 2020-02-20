@@ -1,9 +1,9 @@
 package com.yicj.study.handler;
 
 import com.yicj.study.bean.BeanFactory;
-import com.yicj.study.servlet.ServletRequest;
-import com.yicj.study.servlet.ServletResponse;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.lang.reflect.Method;
 
 public class MappingHandler {
@@ -19,8 +19,8 @@ public class MappingHandler {
         this.args = args ;
     }
 
-    public boolean handle(ServletRequest req, ServletResponse res){
-        String requestUri = req.getRequestURI();
+    public boolean handle(HttpServletRequest req, HttpServletResponse res){
+        String requestUri = req.getRequestURI() ;
         if(!uri.equals(requestUri)){
             return false ;
         }
@@ -31,7 +31,7 @@ public class MappingHandler {
         try {
             Object ctrl = BeanFactory.getBean(controller);
             Object ret = method.invoke(ctrl, parameters);
-            res.println(ret) ;
+            res.getWriter().println(ret); ;
             return true ;
         }catch (Exception e){
             throw new RuntimeException(e) ;

@@ -16,38 +16,42 @@ public class ClassScanner2 {
      * @param packageName
      * @return
      */
-    public static List<Class<?>> getClasses(String packageName) throws Exception {
-        // 第一个class类的集合
-        List<Class<?>> classes = new ArrayList<>();
-        // 是否循环迭代
-        boolean recursive = true;
-        // 获取包的名字 并进行替换
-        String packageDirName = packageName.replace('.', '/');
-        //String packageDirName = packageName.replace('.', File.separatorChar);
-        System.out.println("packageDirName : " + packageDirName);
-        // 定义一个枚举的集合 并进行循环来处理这个目录下的things
-        Enumeration<URL> dirs = Thread.currentThread().getContextClassLoader()
-                .getResources(packageDirName);
-        // 循环迭代下去
-        while (dirs.hasMoreElements()) {
-            // 获取下一个元素
-            URL url = dirs.nextElement();
-            // 得到协议的名称
-            String protocol = url.getProtocol();
-            // 如果是以文件的形式保存在服务器上
-            if ("file".equals(protocol)) {
-                System.out.println("file类型的扫描");
-                //System.out.println("file : " + url.getFile());
-                // 获取包的物理路径
-                String filePath = URLDecoder.decode(url.getFile(), "UTF-8");
-                // 以文件的方式扫描整个包下的文件 并添加到集合中
-                findAndAddClassesInPackageByFile(packageName, filePath,
-                        recursive, classes);
-            } else if ("jar".equals(protocol)) {
-                classes.addAll(findAndAddClassesInPackageByJar(url, packageDirName, recursive));
+    public static List<Class<?>> scanClasses(String packageName) {
+        try {
+            // 第一个class类的集合
+            List<Class<?>> classes = new ArrayList<>();
+            // 是否循环迭代
+            boolean recursive = true;
+            // 获取包的名字 并进行替换
+            String packageDirName = packageName.replace('.', '/');
+            //String packageDirName = packageName.replace('.', File.separatorChar);
+            System.out.println("packageDirName : " + packageDirName);
+            // 定义一个枚举的集合 并进行循环来处理这个目录下的things
+            Enumeration<URL> dirs = Thread.currentThread().getContextClassLoader()
+                    .getResources(packageDirName);
+            // 循环迭代下去
+            while (dirs.hasMoreElements()) {
+                // 获取下一个元素
+                URL url = dirs.nextElement();
+                // 得到协议的名称
+                String protocol = url.getProtocol();
+                // 如果是以文件的形式保存在服务器上
+                if ("file".equals(protocol)) {
+                    System.out.println("file类型的扫描");
+                    //System.out.println("file : " + url.getFile());
+                    // 获取包的物理路径
+                    String filePath = URLDecoder.decode(url.getFile(), "UTF-8");
+                    // 以文件的方式扫描整个包下的文件 并添加到集合中
+                    findAndAddClassesInPackageByFile(packageName, filePath,
+                            recursive, classes);
+                } else if ("jar".equals(protocol)) {
+                    classes.addAll(findAndAddClassesInPackageByJar(url, packageDirName, recursive));
+                }
             }
+            return classes;
+        }catch (Exception e) {
+            throw new RuntimeException(e) ;
         }
-        return classes;
     }
 
     private static Set<Class<?>> findAndAddClassesInPackageByJar(URL url,
