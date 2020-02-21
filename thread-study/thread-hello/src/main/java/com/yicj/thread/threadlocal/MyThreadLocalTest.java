@@ -1,7 +1,13 @@
 package com.yicj.thread.threadlocal;
 
 public class MyThreadLocalTest {
-    private static MyThreadLocal<Long> c = new MyThreadLocal<>(){
+   /* private static MyThreadLocal<Long> c = new MyThreadLocal<>(){
+        @Override
+        protected Long initialValue() {
+            return Thread.currentThread().getId();
+        }
+    } ;*/
+    private static MyThreadLocal2<Long> c = new MyThreadLocal2<>(){
         @Override
         protected Long initialValue() {
             return Thread.currentThread().getId();
