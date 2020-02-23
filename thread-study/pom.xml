@@ -12,6 +12,7 @@
   <modules>
     <module>thread-hello</module>
     <module>threadlocal-hello</module>
+      <module>synchronized-hello</module>
   </modules>
 
 
