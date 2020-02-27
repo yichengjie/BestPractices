@@ -21,4 +21,11 @@ public class DisappearRequest1 implements Runnable {
             count++ ;
         }
     }
+//    private synchronized static void busi(){
+//        add();
+//    }
+//
+//    private static void add(){
+//        count++ ;
+//    }
 }

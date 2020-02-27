@@ -19,6 +19,7 @@ public class SynchronizedObjectCodeBlock2 implements Runnable {
         }
     }
 
+
     public static void main(String[] args) {
         Thread t1 = new Thread(instance) ;
         Thread t2 = new Thread(instance) ;

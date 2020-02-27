@@ -1,4 +1,4 @@
-package com.yicj.study.model;
+package com.yicj.study.hello;
 
 public class Val<T> {
     T value ;

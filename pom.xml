@@ -33,6 +33,7 @@
         <module>codec-study</module>
         <module>jetty-study</module>
         <module>mini-spring</module>
+        <module>hibernate-validator-study</module>
     </modules>
     <packaging>pom</packaging>
 
