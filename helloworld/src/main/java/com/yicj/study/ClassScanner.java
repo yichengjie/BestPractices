@@ -94,6 +94,7 @@ public class ClassScanner {
         Enumeration<JarEntry> entries = jarFile.entries();
         while (entries.hasMoreElements()){
             String entryName = entries.nextElement().getName();
+            log.info("entryName : {}", entryName);
             if(entryName.endsWith(".class") && entryName.startsWith(packagePath)){
                 String className = entryName.replace('/','.')
                         .substring(0,entryName.length() -6) ;
