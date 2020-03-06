@@ -1,4 +1,4 @@
-package com.yicj.study;
+package com.yicj.study.spring.core;
 
 import lombok.extern.slf4j.Slf4j;
 

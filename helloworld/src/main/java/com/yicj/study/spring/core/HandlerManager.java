@@ -1,15 +1,24 @@
-package com.yicj.study.handler;
+package com.yicj.study.spring.core;
 
-import com.yicj.study.annotation.Controller;
-import com.yicj.study.annotation.RequestMapping;
-import com.yicj.study.annotation.RequestParam;
+import com.yicj.study.spring.core.annotation.Controller;
+import com.yicj.study.spring.core.annotation.RequestMapping;
+import com.yicj.study.spring.core.annotation.RequestParam;
+import com.yicj.study.spring.test.controller.UserController;
+
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 import java.util.ArrayList;
 import java.util.List;
 
 public class HandlerManager {
+
     public static List<MappingHandler> mappingHandlerList = new ArrayList<>() ;
+
+    public static void main(String[] args) {
+        List<MappingHandler> handlers =
+                HandlerManager.parseHandlerFormController(UserController.class);
+        System.out.println(handlers);
+    }
 
     public static void resolveMappingHandler(List<Class<?>> classList){
         for (Class<?> clazz : classList){
@@ -27,7 +36,7 @@ public class HandlerManager {
         Controller controller = clazz.getDeclaredAnnotation(Controller.class);
         //如果是controller的话则解析各个方法
         if(controller == null){
-            return retList ;
+           return retList ;
         }
         Method[] methods = clazz.getDeclaredMethods();
         for(Method method: methods){
@@ -37,12 +46,7 @@ public class HandlerManager {
         return retList ;
     }
 
-    /**
-     * 解析方法
-     * @param method
-     * @param clazz
-     * @return
-     */
+
     private static MappingHandler parseMethod(Method method, Class<?> clazz){
         RequestMapping requestMapping =
                 method.getDeclaredAnnotation(RequestMapping.class) ;
@@ -58,7 +62,7 @@ public class HandlerManager {
         }
         String[] paramsNames = paramNameList.toArray(new String[0]);
         MappingHandler handler =
-                new MappingHandler(url,method,clazz,paramsNames) ;
+                new MappingHandler(url,clazz,method,paramsNames) ;
         return handler ;
     }
 
@@ -77,4 +81,6 @@ public class HandlerManager {
             list.add(t) ;
         }
     }
+
+
 }
