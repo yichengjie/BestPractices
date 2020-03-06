@@ -15,7 +15,7 @@ public class MyThreadLocal2 <T>{
 
 
     private synchronized static HashMap<Integer,Object> getMap(){
-        var thread = Thread.currentThread() ;
+        Thread thread = Thread.currentThread() ;
         if(!threadLocalMap.containsKey(thread)){
             threadLocalMap.put(thread,new HashMap<>()) ;
         }
@@ -28,7 +28,7 @@ public class MyThreadLocal2 <T>{
     }
 
     public T get() {
-        var map = getMap() ;
+        HashMap<Integer,Object> map = getMap() ;
         if(!map.containsKey(this.threadLocalHash)){
             map.put(this.threadLocalHash,initialValue()) ;
         }
@@ -36,7 +36,7 @@ public class MyThreadLocal2 <T>{
     }
 
     public void set(T value){
-        var map = getMap() ;
+        HashMap<Integer,Object> map = getMap() ;
         map.put(this.threadLocalHash,value) ;
     }
 }

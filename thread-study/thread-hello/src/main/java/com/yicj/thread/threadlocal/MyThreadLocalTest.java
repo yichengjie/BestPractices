@@ -7,7 +7,7 @@ public class MyThreadLocalTest {
             return Thread.currentThread().getId();
         }
     } ;*/
-    private static MyThreadLocal2<Long> c = new MyThreadLocal2<>(){
+    private static MyThreadLocal2<Long> c = new MyThreadLocal2<Long>(){
         @Override
         protected Long initialValue() {
             return Thread.currentThread().getId();

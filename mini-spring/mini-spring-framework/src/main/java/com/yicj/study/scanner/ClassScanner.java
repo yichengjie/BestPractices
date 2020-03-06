@@ -1,6 +1,5 @@
 package com.yicj.study.scanner;
 
-import sun.reflect.Reflection;
 import java.io.File;
 import java.io.IOException;
 import java.net.JarURLConnection;
@@ -140,9 +139,9 @@ public class ClassScanner {
             return;
         }
         // 如果存在 就获取包下的所有文件 包括目录
-        File[] dirFiles = dir.listFiles(file -> {
-            return (recursive && file.isDirectory())||(file.getName().endsWith(".class"));
-        });
+        File[] dirFiles = dir.listFiles(file ->
+            (recursive && file.isDirectory())||(file.getName().endsWith(".class"))
+        );
         // 循环所有文件
         for (File file : dirFiles) {
             // 如果是目录 则继续扫描
