@@ -18,7 +18,6 @@ public class ThreadLocalAdvance {
         }
     }
 
-
     static class A {
         public void get() {
             Integer data = MyThreadScopeData.getThreadInstance().getNumber();
