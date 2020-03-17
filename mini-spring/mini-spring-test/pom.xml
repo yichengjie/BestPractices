@@ -31,7 +31,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.yicj.study.Application</mainClass>
+                            <mainClass>com.yicj.thread.Application</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

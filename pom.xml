@@ -34,6 +34,7 @@
         <module>jetty-study</module>
         <module>mini-spring</module>
         <module>hibernate-validator-study</module>
+        <module>itcast-note</module>
     </modules>
     <packaging>pom</packaging>
 
