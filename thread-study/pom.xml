@@ -13,6 +13,7 @@
     <module>thread-hello</module>
     <module>threadlocal-hello</module>
       <module>synchronized-hello</module>
+      <module>active-object</module>
   </modules>
 
 
