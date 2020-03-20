@@ -14,5 +14,6 @@ public class MakeStringRequest extends MethodRequest {
     @Override
     public void execute() {
         Result<String> result = servant.makeString(count,fillchar) ;
+        future.setResult(result);
     }
 }

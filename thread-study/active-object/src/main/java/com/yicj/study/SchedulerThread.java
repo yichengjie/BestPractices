@@ -18,7 +18,6 @@ public class SchedulerThread extends Thread {
 
     @Override
     public void run() {
-
         while (true){
             MethodRequest request = queue.takeRequest() ;
             request.execute() ;
