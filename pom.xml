@@ -36,6 +36,7 @@
         <module>hibernate-validator-study</module>
         <module>itcast-note</module>
         <module>nio-study</module>
+        <module>java8-future</module>
     </modules>
     <packaging>pom</packaging>
 
